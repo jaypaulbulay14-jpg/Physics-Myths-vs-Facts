@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics Myths & Facts</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Physics Myths & Facts</h1>
+  <p>Click a myth to reveal the truth</p>
+  <button id="darkToggle">🌙 Dark Mode</button>
+</header>
+
+<main class="container">
+
+  <!-- 10 Myths -->
+
+  <div class="myth-card" onclick="toggleTruth(this)">
+    <h3><i class="fas fa-car"></i> Seatbelts cause injuries</h3>
+    <div class="content">
+      <div class="image-box">
+        <img src="seatbelt.png" alt="seatbelt png">
+        <span class="label top velocity" onclick="showFormula('v = Δs/Δt')">v</span>
+        <span class="label right force" onclick="showFormula('F = ma')">F</span>
+      </div>
+      <div class="text">
+        <p class="truth">❌ Myth! Seatbelts reduce force by increasing stopping time.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="myth-card" onclick="toggleTruth(this)">
+    <h3><i class="fas fa-moon"></i> Space has no gravity</h3>
+    <div class="content">
+      <div class="image-box">
+        <img src="vaccum.png" alt="vaccum png">
+        <span class="label top gravity" onclick="showFormula('g ≈ 9.8 m/s²')">g</span>
+      </div>
+      <div class="text">
+        <p class="truth">❌ Myth! Gravity exists everywhere, even in space.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="myth-card" onclick="toggleTruth(this)">
+    <h3><i class="fas fa-volume-up"></i> Sound travels through vacuum</h3>
+    <div class="content">
+      <div class="image-box">
+        <img src="sound.png" alt="sound png">
+        <span class="label top velocity" onclick="showFormula('v = fλ')">v</span>
+      </div>
+      <div class="text">
+        <p class="truth">❌ Myth! Sound needs a medium to travel.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="myth-card" onclick="toggleTruth(this)">
+    <h3><i class="fas fa-rocket"></i> Rockets need air to move</h3>
+    <div class="content">
+      <div class="image-box">
+        <img src="rocket.png" alt="rocket png">
+        <span class="label left force" onclick="showFormula('F = ma')">F</span>
+      </div>
+      <div class="text">
+        <p class="truth">❌ Myth! Rockets work using Newton’s Third Law.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="myth-card" onclick="toggleTruth(this)">
+    <h3><i class="fas fa-brain"></i> We only use 10% of our brain</h3>
+    <div class="content">
+      <div class="image-box">
+        <img src="brain.png" alt="brain png">
+      </div>
+      <div class="text">
+        <p class="truth">❌ Myth! Most areas of the brain are active at different times.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="myth-card" onclick="toggleTruth(this)">
+    <h3><i class="fas fa-bolt"></i> Lightning never strikes twice</h3>
+    <div class="content">
+      <div class="image-box">
+        <img src="lightning.png" alt="lightning png">
+      </div>
+      <div class="text">
+        <p class="truth">❌ Myth! Lightning can strike repeatedly in the same area.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="myth-card" onclick="toggleTruth(this)">
+    <h3><i class="fas fa-water"></i> Water drains differently per hemisphere</h3>
+    <div class="content">
+      <div class="image-box">
+        <img src="sink.png" alt="sink png">
+      </div>
+      <div class="text">
+        <p class="truth">❌ Myth! The Coriolis effect is too weak to affect sinks.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="myth-card" onclick="toggleTruth(this)">
+    <h3><i class="fas fa-road"></i> Friction always slows motion</h3>
+    <div class="content">
+      <div class="image-box">
+        <img src="friction.png" alt="friction png">
+        <span class="label left force" onclick="showFormula('F = μN')">F</span>
+      </div>
+      <div class="text">
+        <p class="truth">❌ Myth! Friction can also help motion (like walking).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="myth-card" onclick="toggleTruth(this)">
+    <h3><i class="fas fa-magnet"></i> Magnets attract all metals</h3>
+    <div class="content">
+      <div class="image-box">
+        <img src="magnet.png" alt="magnet png">
+      </div>
+      <div class="text">
+        <p class="truth">❌ Myth! Only ferromagnetic materials are attracted.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUIZ SECTION -->
+  <section class="quiz">
+    <h2>Physics Quick Quiz</h2>
+    <div id="quiz-container">
+      <p id="quiz-question"></p>
+      <div class="quiz-buttons">
+        <button onclick="checkAnswer(true)">True</button>
+        <button onclick="checkAnswer(false)">False</button>
+      </div>
+      <p id="quiz-feedback"></p>
+      <p id="quiz-score"></p>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
